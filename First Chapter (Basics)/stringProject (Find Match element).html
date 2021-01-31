@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>STRING PROJECT</h1></center><br><br>
+
+    <h1>Give Here Your Text: </h1>
+    <textarea name="" id="input" cols="30" rows="10"></textarea>
+
+    <h1>Input Which string You search:</h1>
+    <input type="text" id="search">
+
+    <br><br>
+    <h1 id="result"></h1>
+
+    <script>
+        var input = document.querySelector('#input');
+        var search = document.querySelector('#search');
+        var result = document.querySelector('#result');
+
+        search.addEventListener('keypress', function(){
+            var match = input.value.indexOf(search.value);
+            if(match === -1){
+                result.innerHTML = `The value ${search.value} not found`;
+            }
+            else{
+                result.innerHTML = `The Value ${search.value} found at position ${match}`;
+            }
+        })
+    </script>
+</body>
+</html>

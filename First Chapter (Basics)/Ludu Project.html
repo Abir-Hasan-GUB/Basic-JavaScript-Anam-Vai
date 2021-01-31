@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDU</title>
+</head>
+<body>
+    <h1 id="dice">0</h1>
+    <button onclick="setDice()" id="btn">Click Me</button>
+
+    <script>
+        const dice = document.querySelector("#dice");
+
+        function setDice(){
+            let rand = Math.ceil(Math.random() * 6);
+            dice.innerHTML = rand;
+        }
+
+    </script>
+</body>
+</html>
